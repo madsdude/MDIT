@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Din eksisterende head-indhold her -->
+  <title>Velkommen</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Styling for welcome-container */
+    .welcome-container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .welcome-title {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .welcome-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #3494e6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .welcome-btn:hover {
+      background-color: #2079b0;
+    }
+
+    .welcome-btn.clicked {
+      transform: scale(0.9); /* Mindre størrelse efter klik */
+      transition: transform 0.3s ease, background-color 0.3s ease 0.3s; /* Forsinket farveændring */
+    }
+
+    /* Styling for index-btn */
+    .index-btn-container {
+      margin-top: 20px;
+    }
+
+    .index-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .index-btn:hover {
+      transform: scale(1.1); /* Forstør knappen ved hover */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-container">
+    <h2 class="welcome-title">Velkommen</h2>
+
+    <p>Til MDIT support</p>
+
+    <!-- Knappen for at gå til login-siden -->
+    <a href="login.html" class="welcome-btn" onclick="buttonClicked(this)">Login</a>
+
+    <!-- Knappen for at gå til registreringssiden -->
+    <!-- <a href="register.html" class="welcome-btn" onclick="buttonClicked(this)">Jeg er ny her, opret en konto</a> -->
+
+    <!-- Knappen for at gå til index-siden -->
+    <div class="index-btn-container">
+      <a href="index.html" class="index-btn">Home</a>
+    </div>
+  </div>
+
+  <script>
+    function buttonClicked(button) {
+      button.classList.add('clicked');
+    }
+  </script>
+
+</body>
+</html>

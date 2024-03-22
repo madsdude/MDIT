@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#welcomeMessage {
+    font-size: 18px;
+    color: #555;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#chatMessages {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#chatInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* ... (din eksisterende CSS-kode) */
+
+#contactSection {
+    margin-bottom: 20px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-bottom: 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#contactForm button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #2980b9;
+}

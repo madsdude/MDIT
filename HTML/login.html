@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Din eksisterende head-indhold her -->
+  <title>Login</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Styling for login-containeren */
+    .login-container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-title {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      max-width: 200px; /* Juster denne bredde efter behov */
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box; /* For at tage højde for padding og grænse */
+      margin: 0 auto; /* Centrer input i forhold til bredden */
+    }
+
+    .login-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #3494e6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .login-btn:hover {
+      background-color: #2079b0;
+    }
+
+    .back-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .back-btn:hover {
+      background-color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 class="login-title">Login</h2>
+    
+    <div class="form-group">
+      <label for="username">Brugernavn:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Adgangskode:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <button class="login-btn" onclick="attemptLogin()">Login</button>
+
+    <!-- Tilføj tilbage-knap -->
+    <a href="welcome.html" class="back-btn">Tilbage</a>
+  </div>
+
+  <script>
+    function attemptLogin() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simpel check af brugernavn og adgangskode (dette er ikke sikkerhedsmæssigt anbefalet)
+      if (username === 'admin' && password === 'password') {
+        alert('Login succesfuldt!');
+        // Redirect brugeren til en hjemmeside efter login
+        window.location.href = 'support.html';
+      } else {
+        alert('Login mislykkedes. Kontroller dine oplysninger.');
+      }
+    }
+  </script>
+
+</body>
+</html>

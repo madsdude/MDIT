@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oioGGmUv/3mWwC2E51ULsTj7kg2ejI4cL+KkrtFb5Rz5Zvb99SfWHUOfdDJci7U9" crossorigin="anonymous">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prices - MDIT</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background: #3494e6;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 1em;
+      margin: 0 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #3494e6;
+    }
+
+    h1 {
+      margin-bottom: 0.5em;
+      text-align: center;
+      color: #333;
+    }
+
+    .prices-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .price {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 15px;
+      transition: transform 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .price:hover {
+      transform: translateY(-5px);
+      background-color: #3494e6;
+      border-color: #3494e6;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.5em;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Din Virksomhed</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="prices.html">Prices</a>
+    <a href="contact.html">Contact</a>
+    <a href="Welcome.html">login</a>
+  </nav>
+
+  <div class="prices-container">
+    <div class="price">
+      <h2>Tier 1 support</h2>
+      <p>Offices support</p>
+      <p>Netværks support</p>
+      <p>5 supporttickets pr. måned</p>
+      <p>Prices 250 DKK/måned</p>
+    </div>
+
+    <div class="price">
+      <h2>Tier 2 support</h2>
+      <p>Offices support</p>
+      <p>Netværks support</p>
+      <p>Overvåning support</p>
+      <p>10 supporttickets pr. måned</p>
+      <p>prices 500 DKK/måned</p>
+    </div>
+
+    <div class="price">
+      <h2>Tier 3 support</h2>
+      <p>Offices support</p>
+      <p>Netværks support</p>
+      <p>Overvåning support</p>
+      <p>20 supporttickets pr. måned</p>
+      <p>24/7 support</p>
+      <p>prices 500 DKK/måned</p>
+    </div>
+  </div>
+
+
+  <footer>
+    
+    <p>&copy; 2023 Din Virksomhed. Alle rettigheder forbeholdes.</p>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.linkedin.com/company/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        <!-- Tilføj flere sociale medie-ikoner efter behov -->
+      </div>
+  </footer>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65707f8fbfb79148e59aafec/1hgvn4hvk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Support-side</h1>
+            <p id="welcomeMessage">Velkommen til support-siden,</p>
+        </header>
+
+        <section id="contactSection">
+            <h2>Kontakt os</h2>
+            <form id="contactForm">
+                <label for="contactEmail">E-mail:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+
+                <label for="contactMessage">Besked:</label>
+                <textarea id="contactMessage" name="contactMessage" required></textarea>
+
+                <button type="button" onclick="sendEmail()">Send e-mail</button>
+            </form>
+        </section>
+
+        <section id="smsSection">
+            <h2>Send en SMS</h2>
+            <form id="smsForm">
+                <label for="smsPhoneNumber">Telefonnummer:</label>
+                <input type="tel" id="smsPhoneNumber" name="smsPhoneNumber" required>
+
+                <label for="smsMessage">Besked:</label>
+                <textarea id="smsMessage" name="smsMessage" required></textarea>
+
+                <button type="button" onclick="sendSMS()">Send SMS</button>
+            </form>
+        </section>
+
+        <a href="index.html" onclick="buttonClicked(this)">Log ud</a>
+
+        <!-- <button onclick="logout()">Log ud</button> -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
