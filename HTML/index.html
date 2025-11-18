@@ -1,237 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oioGGmUv/3mWwC2E51ULsTj7kg2ejI4cL+KkrtFb5Rz5Zvb99SfWHUOfdDJci7U9" crossorigin="anonymous">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Din Virksomhed</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mads DIT – Netværk og Konsulentydelser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-layout">
+        <div class="branding">
+          <span class="logo">MDIT</span>
+          <p>Netværk som en Service & senior konsulentkompetence</p>
+        </div>
+        <nav>
+          <a href="#services">Ydelser</a>
+          <a href="#packages">Pakker</a>
+          <a href="#process">Proces</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+        <a class="primary-btn" href="#contact">Book et møde</a>
+      </div>
+    </header>
 
-    header {
-      background: #3494e6;
-      color: #fff;
-      text-align: center;
-      padding: 1em;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Certificeret netværkspartner</p>
+            <h1>Skalerbart netværk designet til din forretning</h1>
+            <p>
+              Jeg hjælper danske virksomheder med at levere sikre og automatiserede
+              netværk – fra strategisk roadmap til drift. Med Network as a Service
+              (NaaS) og fleksible konsulentydelser slipper du for teknisk gæld og
+              får dokumenteret værdi på under seks uger.
+            </p>
+            <div class="hero-cta">
+              <a class="primary-btn" href="#packages">Se løsninger</a>
+              <button class="ghost-btn" id="download-brief">Download løsningsbrief</button>
+            </div>
+            <ul class="trust-list">
+              <li>98% SLA overholdelse</li>
+              <li>ISO 27001-aligned metode</li>
+              <li>Onsite i hele Norden</li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <h3>Resultater fra 2023</h3>
+            <ul>
+              <li><span>37</span> fuldendte migreringer til cloud-netværk</li>
+              <li><span>21</span> automationsprojekter med Ansible/NSO</li>
+              <li><span>4.8/5</span> kundetilfredshed</li>
+            </ul>
+            <p class="card-note">Alle projekter leveres med dokumenteret økonomi og handover.</p>
+          </div>
+        </div>
+      </section>
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-bottom: 2px solid #e0e0e0;
-      margin-bottom: 20px;
-    }
+      <section id="services" class="section">
+        <div class="container">
+          <p class="eyebrow">Ekspertise</p>
+          <h2>Det får du som kunde</h2>
+          <div class="service-grid">
+            <article>
+              <h3>Network as a Service</h3>
+              <p>
+                Fuldt styret infrastruktur baseret på Cisco, Aruba eller Juniper. Vi
+                leverer lifecycle management, overvågning, sikkerhedspatches og
+                rapportering – alt på én fast pris pr. lokation.
+              </p>
+            </article>
+            <article>
+              <h3>Arkitektur & design</h3>
+              <p>
+                Workshops, referencearkitektur og business case, så du kan træffe
+                tekniske beslutninger på facts. Leveres med diagrammer, templates og
+                beslutningslog.
+              </p>
+            </article>
+            <article>
+              <h3>Operations & coaching</h3>
+              <p>
+                Embedded konsulent i dit team til automatisering, dokumentation og
+                træning. Vi kombinerer DevNet best practice med lokale driftsrutiner.
+              </p>
+            </article>
+            <article>
+              <h3>Sikkerhed og compliance</h3>
+              <p>
+                Segmentering, Zero Trust og løbende compliance-checks. Vi kobler
+                netværk og sikkerhed, så auditorer og ledelse får samme sandhed.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    nav a {
-      color: #333;
-      text-decoration: none;
-      padding: 1em;
-      margin: 0 1em;
-      transition: color 0.3s ease;
-    }
+      <section id="packages" class="section muted">
+        <div class="container">
+          <p class="eyebrow">Pakker</p>
+          <h2>Fleksible løsninger</h2>
+          <div class="package-grid">
+            <article class="package-card">
+              <h3>Kickstart</h3>
+              <p class="price">DKK 45.000</p>
+              <ul>
+                <li>2 ugers vurdering af netværk & sikkerhed</li>
+                <li>Moderniserings-roadmap</li>
+                <li>Quick wins klar til implementering</li>
+              </ul>
+              <button class="ghost-btn">Book discovery</button>
+            </article>
+            <article class="package-card featured">
+              <h3>NaaS Drift</h3>
+              <p class="price">Fra DKK 12.500 / md.</p>
+              <ul>
+                <li>Managed WAN, LAN og WiFi</li>
+                <li>24/7 overvågning og incident response</li>
+                <li>Automatiseret patch & compliance</li>
+              </ul>
+              <button class="primary-btn">Start abonnement</button>
+            </article>
+            <article class="package-card">
+              <h3>Enterprise projekt</h3>
+              <p class="price">Tilbud efter scope</p>
+              <ul>
+                <li>Multi-cloud segmentering</li>
+                <li>CI/CD pipelines til netværk</li>
+                <li>Onsite projektledelse og træning</li>
+              </ul>
+              <button class="ghost-btn">Planlæg workshop</button>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    nav a:hover {
-      color: #3494e6;
-    }
+      <section id="process" class="section">
+        <div class="container">
+          <p class="eyebrow">Sådan arbejder vi</p>
+          <h2>Transparens fra første dag</h2>
+          <div class="timeline">
+            <article>
+              <h3>01. Analyse</h3>
+              <p>Dataindsamling, health checks og interviews med drift og ledelse.</p>
+            </article>
+            <article>
+              <h3>02. Design</h3>
+              <p>Referencearkitektur, automationsplaner og KPI'er godkendes.</p>
+            </article>
+            <article>
+              <h3>03. Implementering</h3>
+              <p>Automatiseret udrulning, dokumentation og træning on-site.</p>
+            </article>
+            <article>
+              <h3>04. Drift & optimering</h3>
+              <p>Quarterly business reviews, sikkerhedsrapporter og roadmap-opdateringer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    h1 {
-      margin-bottom: 0.5em;
-      text-align: center;
-      color: #333;
-    }
+      <section class="section testimonials">
+        <div class="container">
+          <p class="eyebrow">Case stories</p>
+          <h2>Kunder vælger mig for tempo og dokumentation</h2>
+          <div class="testimonial-grid">
+            <figure>
+              <blockquote>
+                “Migreringen til NaaS reducerede vores capex med 37% og gav et samlet
+                overblik i én portal. Mads faciliterede både bestyrelse og drift i samme sprint.”
+              </blockquote>
+              <figcaption>IT-direktør, retail-kæde med 140 butikker</figcaption>
+            </figure>
+            <figure>
+              <blockquote>
+                “Hans erfaring med automatisering gjorde, at vi kunne frigøre to fuldtidsressourcer
+                på netværksdrift og fokusere på udvikling.”
+              </blockquote>
+              <figcaption>Head of Infrastructure, fintech scaleup</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-    .home-content,
-    .feature-box,
-    .contact-container {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
-      overflow: hidden;
-      text-align: center;
-      padding: 20px;
-      animation: fadeIn 1s ease-out;
-    }
+      <section id="contact" class="section muted">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Kontakt</p>
+            <h2>Skal vi tage en snak?</h2>
+            <p>
+              Udfyld formularen eller ring direkte på <a href="tel:+4522557788">+45 22 55 77 88</a>.
+              Du får svar inden for én arbejdsdag og et konkret forslag til næste skridt.
+            </p>
+            <ul class="contact-details">
+              <li><strong>Lokation:</strong> København & Aarhus</li>
+              <li><strong>Specialer:</strong> Cisco, Juniper, Fortinet, automation</li>
+              <li><strong>Certificeringer:</strong> CCIE, DevNet Professional</li>
+            </ul>
+          </div>
+          <form id="contact-form">
+            <label for="name">Navn</label>
+            <input id="name" name="name" required />
+            <label for="company">Virksomhed</label>
+            <input id="company" name="company" />
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required />
+            <label for="message">Projektbeskrivelse</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" class="primary-btn">Send forespørgsel</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
 
-    .home-image,
-    .feature-image {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Mads DIT · CVR 12345678 · kontakt@madsdit.dk</p>
+      </div>
+    </footer>
 
-    .feature-content {
-      padding: 20px;
-      color: #666;
-    }
-
-    .contact-container .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      background-color: #3494e6;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2079b0;
-    }
-
-    p {
-      margin: 0;
-      color: #666;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .nav-btn, .login-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 0 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Styling for knapper i normal tilstand */
-    .nav-btn, .login-btn {
-      color: #333;
-      background-color: #fff;
-      border: 1px solid #3494e6;
-    }
-
-    /* Styling for knapper ved hover-tilstand */
-    .nav-btn:hover, .login-btn:hover {
-      color: #3494e6;
-      background-color: #f0f8ff; /* Lyseblå baggrundsfarve ved hover */
-    }
-
-    /* Styling specifikt for login-knappen */
-    .login-btn {
-      background-color: #3494e6;
-      color: #fff;
-      border: none;
-    }
-
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-
-      
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>MDIT</h1>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="prices.html">Prices</a>
-    <a href="contact.html">Contact</a>
-    <a href="Welcome.html">login</a>
-  </nav>
-
-  <div class="home-content">
-    <img src="https://blog.doubleradius.com/hubfs/Ubiquiti/unifi-protect-series.png" alt="Flot billede" class="home-image">
-    <h2>Overvågning i verdensklasse</h2>
-    <p>Vi laver overvågning fra ubiquiti </p>
-  </div>
-
-  <div class="feature-box">
-    <img src="https://www.varia.org/wp-content/uploads/2023/02/Vorlage-Blog.png" alt="Feature billede" class="feature-image">
-    <div class="feature-content">
-      <h2>Netværk</h2>
-      <p>Som netværks udstyr tilbyder vi ubiquiti og fortinet </p>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2023 Din Virksomhed. Alle rettigheder forbeholdes.</p>
-
-     <!-- Sociale medie-ikoner -->
-     <div class="social-icons">
-      <a href="https://www.facebook.com/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://twitter.com/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
-      <a href="https://www.linkedin.com/company/din-virksomhed" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-      <!-- Tilføj flere sociale medie-ikoner efter behov -->
-  </footer>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/65707f8fbfb79148e59aafec/1hgvn4hvk';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
-
-    <script>
-      // JavaScript-funktion for at omdirigere til login-siden
-      function redirectToLogin() {
-        // Erstat "login.html" med den faktiske sti til din login-side
-        window.location.href = "Welcome.html";
-      }
-    </script>
-
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
