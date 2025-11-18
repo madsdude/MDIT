@@ -10,11 +10,11 @@ Krav: Docker 20+.
 # Byg image
  docker build -t mdit-site .
 
-# Start container og eksponer port 8080
- docker run --rm -p 8080:80 mdit-site
+# Start container og eksponer både port 80 (standard localhost) og 8080
+ docker run --rm -p 80:80 -p 8080:80 mdit-site
 ```
 
-Åbn derefter `http://localhost:8080` for at se siden.
+Åbn derefter `http://localhost` (eller `http://localhost:8080`) for at se siden.
 
 ## Struktur
 - `HTML/index.html` – single-page site med sektioner for ydelser, pakker, proces, cases og kontakt.
