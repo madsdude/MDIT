@@ -1,49 +1,49 @@
-// ... (din eksisterende JavaScript-kode)
-
-function sendEmail() {
-    var contactForm = document.getElementById("contactForm");
-    var contactEmail = document.getElementById("contactEmail").value;
-    var contactMessage = document.getElementById("contactMessage").value;
-
-    // Erstatt med din e-mailadresse eller implementer den ønskede logik
-    var emailAddress = 'madschurchill@gmail.com';
-
-    // Implementer logik til at sende en e-mail, f.eks. ved hjælp af et mailto-link
-    window.location.href = `mailto:${emailAddress}?subject=Support Anmodning&body=${encodeURIComponent("E-mail: " + contactEmail + "\nBesked: " + contactMessage)}`;
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
 }
 
-function sendSMS() {
-    var smsForm = document.getElementById("smsForm");
-    var smsPhoneNumber = document.getElementById("smsPhoneNumber").value;
-    var smsMessage = document.getElementById("smsMessage").value;
+const contactForm = document.getElementById('contact-form');
+const statusElement = document.getElementById('form-status');
 
-    // Erstatt med dine Twilio-oplysninger
-    var accountSid = 'AC778ddbd235ed466a5087a067f726edb9';
-    var authToken = '14f6fedeeb2f743200e24e3b7d5fa514';
-    var phoneNumber = '+12014256428';
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = formData.get('name');
 
-    // Brug Twilio's REST API til at sende SMS
-    fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic ' + btoa(`${accountSid}:${authToken}`)
-        },
-        body: new URLSearchParams({
-            To: smsPhoneNumber,
-            From: phoneNumber,
-            Body: smsMessage
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('SMS sendt:', data);
-        alert('SMS sendt!');
-    })
-    .catch(error => {
-        console.error('Fejl ved afsendelse af SMS:', error);
-        alert('Fejl ved afsendelse af SMS.');
-    });
+    if (statusElement) {
+      statusElement.textContent = 'Sender besked...';
+    }
+
+    // Simulerer en kort netværksanmodning
+    setTimeout(() => {
+      if (statusElement) {
+        const message = name ? `Tak ${name}! Jeg vender tilbage inden for 24 timer.` :
+          'Tak for din besked! Jeg vender tilbage inden for 24 timer.';
+        statusElement.textContent = message;
+      }
+      contactForm.reset();
+    }, 900);
+  });
 }
 
-// ... (din eksisterende JavaScript-kode)
+const briefButton = document.getElementById('download-brief');
+if (briefButton) {
+  briefButton.addEventListener('click', () => {
+    const brief = `MDIT Network Brief\n\n` +
+      `• Fokus på Network as a Service og automatisering\n` +
+      `• KPI'er: SLA, compliance og tidsbesparelse\n` +
+      `• Kontakt: kontakt@madsdit.dk / +45 22 55 77 88`;
+
+    const blob = new Blob([brief], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'MDIT-naas-brief.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  });
+}
