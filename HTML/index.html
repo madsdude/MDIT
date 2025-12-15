@@ -252,7 +252,7 @@
                 <li>Roadmap forklaret i almindeligt sprog</li>
                 <li>Quick wins vi kan rulle ud sammen</li>
               </ul>
-              <button class="ghost-btn">Book discovery</button>
+              <button class="ghost-btn" data-action="contact" data-subject="Kickstart pakken">Book discovery</button>
             </article>
             <article class="package-card featured">
               <h3>NaaS Drift</h3>
@@ -262,7 +262,7 @@
                 <li>24/7 overvågning og ægte mennesker i røret</li>
                 <li>Automatiseret patch & compliance forklaret for dit hold</li>
               </ul>
-              <button class="primary-btn">Start abonnement</button>
+              <button class="primary-btn" data-action="contact" data-subject="NaaS Drift abonnement">Start abonnement</button>
             </article>
             <article class="package-card">
               <h3>Enterprise projekt</h3>
@@ -272,8 +272,44 @@
                 <li>CI/CD pipelines til netværk med fælles ejerskab</li>
                 <li>Onsite projektledelse, træning og forankring</li>
               </ul>
-              <button class="ghost-btn">Planlæg workshop</button>
+              <button class="ghost-btn" data-action="contact" data-subject="Enterprise projekt">Planlæg workshop</button>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="calculator" class="section reveal">
+        <div class="container">
+          <div class="calculator-layout">
+            <div class="calculator-controls">
+              <p class="eyebrow">Prisberegner</p>
+              <h2>Hvad koster ro i maven?</h2>
+              <p>Justér parametrene og se din estimerede månedspris for fuld drift og support.</p>
+
+              <div class="input-group">
+                <label for="locations-slider">Antal lokationer: <span id="locations-val">5</span></label>
+                <input type="range" id="locations-slider" min="1" max="50" value="5">
+              </div>
+
+              <div class="input-group">
+                <label for="users-slider">Antal medarbejdere: <span id="users-val">50</span></label>
+                <input type="range" id="users-slider" min="10" max="500" value="50" step="10">
+              </div>
+            </div>
+
+            <div class="calculator-result">
+              <h3>Estimeret investering</h3>
+              <div class="price-display">
+                <span class="currency">DKK</span>
+                <span id="total-price" class="amount">22.500</span>
+                <span class="period">/ md.</span>
+              </div>
+              <div class="savings-pill">
+                Du sparer ca. <span id="savings-amount">6.500</span> DKK ift. egen drift
+              </div>
+              <p class="disclaimer">* Dette er et estimat. Endelig pris afhænger af udstyr og kompleksitet.</p>
+              <a href="#contact" id="calc-cta" class="primary-btn">Få et præcist tilbud</a>
+            </div>
           </div>
         </div>
       </section>
@@ -303,25 +339,60 @@
         </div>
       </section>
 
-      <section class="section testimonials reveal">
-        <div class="container">
-          <p class="eyebrow">Case stories</p>
-          <h2>Kunder vælger mig for tempo og nærvær</h2>
-          <div class="testimonial-grid">
-            <figure>
-              <blockquote>
-                “Mads oversatte teknikken, så både butiksfolk og bestyrelse forstod beslutningerne.
-                Vi gik live hurtigere, fordi alle følte sig hørt.”
-              </blockquote>
-              <figcaption>IT-direktør i en retail-kæde med 140 butikker</figcaption>
-            </figure>
-            <figure>
-              <blockquote>
-                “Han sad sammen med teamet, fik automatiseret de manuelle opgaver og sørgede for,
-                at alle kunne overtage, da han gik ud ad døren.”
-              </blockquote>
-              <figcaption>Head of Infrastructure i en fintech scaleup</figcaption>
-            </figure>
+      <section id="dashboard" class="section reveal">
+        <div class="container dashboard-layout">
+          <div class="dashboard-text">
+            <p class="eyebrow">Overblik & Kontrol</p>
+            <h2>Fra sort boks til krystalklar indsigt</h2>
+            <p>
+              I får direkte adgang til samme værktøjer, som jeg bruger.
+              Vores dashboard samler trusler, performance og ændringer ét sted,
+              så I altid kan svare på spørgsmålet: "Kører det som det skal?"
+            </p>
+            <ul class="check-list">
+              <li>Realtids overblik over alle lokationer</li>
+              <li>Automatisk alarmering ved uregelmæssigheder</li>
+              <li>Transparente rapporter til ledelsen</li>
+            </ul>
+          </div>
+
+          <div class="dashboard-widget">
+            <div class="widget-header">
+              <span class="status-dot"></span>
+              <span>Live Network Status</span>
+              <span class="widget-time" id="dashboard-time">12:00:00</span>
+            </div>
+
+            <div class="widget-stats">
+              <div class="stat-box">
+                <small>Oppetid</small>
+                <strong class="success-text">99.99%</strong>
+              </div>
+              <div class="stat-box">
+                <small>Latency</small>
+                <strong>12<span class="unit">ms</span></strong>
+              </div>
+              <div class="stat-box">
+                <small>Trusler</small>
+                <strong class="warn-text">0</strong>
+              </div>
+            </div>
+
+            <div class="widget-graph">
+              <!-- SVG Graph injected by JS or simple CSS bars -->
+              <div class="graph-bars" id="live-graph">
+                <!-- Bars generated by JS -->
+              </div>
+            </div>
+
+            <div class="widget-console">
+              <div class="console-header">System Log</div>
+              <ul id="live-logs">
+                <li><span class="log-time">10:42:01</span> <span class="log-info">System check complete. All green.</span></li>
+                <li><span class="log-time">10:41:45</span> <span class="log-success">Automated backup finished (2.4GB).</span></li>
+                <li><span class="log-time">10:40:12</span> <span class="log-info">User login detected: admin@mdit.dk</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
