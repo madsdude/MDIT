@@ -252,7 +252,7 @@
                 <li>Roadmap forklaret i almindeligt sprog</li>
                 <li>Quick wins vi kan rulle ud sammen</li>
               </ul>
-              <button class="ghost-btn">Book discovery</button>
+              <button class="ghost-btn" data-action="contact" data-subject="Kickstart pakken">Book discovery</button>
             </article>
             <article class="package-card featured">
               <h3>NaaS Drift</h3>
@@ -262,7 +262,7 @@
                 <li>24/7 overvågning og ægte mennesker i røret</li>
                 <li>Automatiseret patch & compliance forklaret for dit hold</li>
               </ul>
-              <button class="primary-btn">Start abonnement</button>
+              <button class="primary-btn" data-action="contact" data-subject="NaaS Drift abonnement">Start abonnement</button>
             </article>
             <article class="package-card">
               <h3>Enterprise projekt</h3>
@@ -272,8 +272,44 @@
                 <li>CI/CD pipelines til netværk med fælles ejerskab</li>
                 <li>Onsite projektledelse, træning og forankring</li>
               </ul>
-              <button class="ghost-btn">Planlæg workshop</button>
+              <button class="ghost-btn" data-action="contact" data-subject="Enterprise projekt">Planlæg workshop</button>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="calculator" class="section reveal">
+        <div class="container">
+          <div class="calculator-layout">
+            <div class="calculator-controls">
+              <p class="eyebrow">Prisberegner</p>
+              <h2>Hvad koster ro i maven?</h2>
+              <p>Justér parametrene og se din estimerede månedspris for fuld drift og support.</p>
+
+              <div class="input-group">
+                <label for="locations-slider">Antal lokationer: <span id="locations-val">5</span></label>
+                <input type="range" id="locations-slider" min="1" max="50" value="5">
+              </div>
+
+              <div class="input-group">
+                <label for="users-slider">Antal medarbejdere: <span id="users-val">50</span></label>
+                <input type="range" id="users-slider" min="10" max="500" value="50" step="10">
+              </div>
+            </div>
+
+            <div class="calculator-result">
+              <h3>Estimeret investering</h3>
+              <div class="price-display">
+                <span class="currency">DKK</span>
+                <span id="total-price" class="amount">22.500</span>
+                <span class="period">/ md.</span>
+              </div>
+              <div class="savings-pill">
+                Du sparer ca. <span id="savings-amount">6.500</span> DKK ift. egen drift
+              </div>
+              <p class="disclaimer">* Dette er et estimat. Endelig pris afhænger af udstyr og kompleksitet.</p>
+              <a href="#contact" id="calc-cta" class="primary-btn">Få et præcist tilbud</a>
+            </div>
           </div>
         </div>
       </section>

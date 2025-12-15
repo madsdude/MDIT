@@ -90,3 +90,99 @@
     statElements.forEach(animateStat);
   }
 })();
+
+/* Calculator Logic */
+(() => {
+  const locSlider = document.getElementById('locations-slider');
+  const userSlider = document.getElementById('users-slider');
+  const locVal = document.getElementById('locations-val');
+  const userVal = document.getElementById('users-val');
+  const totalPriceEl = document.getElementById('total-price');
+  const savingsEl = document.getElementById('savings-amount');
+
+  if (!locSlider || !userSlider) return;
+
+  const calculate = () => {
+    const locations = parseInt(locSlider.value);
+    const users = parseInt(userSlider.value);
+
+    // Update labels
+    locVal.textContent = locations;
+    userVal.textContent = users;
+
+    // Pricing Model (Example)
+    // Base per location: 2500 DKK
+    // Per user: 50 DKK
+    const basePerLocation = 2500;
+    const pricePerUser = 50;
+
+    const monthlyPrice = (locations * basePerLocation) + (users * pricePerUser);
+
+    // Traditional IT estimated cost (1.4x factor + hidden costs)
+    const traditionalCost = monthlyPrice * 1.4;
+    const savings = traditionalCost - monthlyPrice;
+
+    // Format numbers
+    const format = (num) => num.toLocaleString('da-DK');
+
+    // Animate or set text
+    totalPriceEl.textContent = format(monthlyPrice);
+    savingsEl.textContent = format(Math.round(savings));
+  };
+
+  locSlider.addEventListener('input', calculate);
+  userSlider.addEventListener('input', calculate);
+
+  // Initialize
+  calculate();
+})();
+
+/* Button Interaction Logic */
+(() => {
+  const contactSection = document.getElementById('contact');
+  const messageInput = document.getElementById('message');
+  const nameInput = document.getElementById('name');
+
+  // Handle Package Buttons
+  document.querySelectorAll('[data-action="contact"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const subject = btn.dataset.subject;
+
+      // Scroll to contact
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Pre-fill message
+      if (messageInput) {
+        messageInput.value = `Hej Mads,\n\nJeg er interesseret i at høre mere om ${subject}.\n\nVenlig hilsen,`;
+        // Trigger a visual 'flash' or focus
+        messageInput.focus();
+        // Move cursor to end isn't standard in all browsers but focus helps
+      }
+    });
+  });
+
+  // Handle Calculator CTA
+  const calcCta = document.getElementById('calc-cta');
+  if (calcCta) {
+    calcCta.addEventListener('click', (e) => {
+      // Allow default scroll anchor behavior, but add message
+      // Or prevent default if we want custom scroll logic
+      // Anchors usually handle scroll nicely if scroll-behavior is smooth in CSS
+
+      const loc = document.getElementById('locations-val').textContent;
+      const users = document.getElementById('users-val').textContent;
+      const price = document.getElementById('total-price').textContent;
+
+      if (messageInput) {
+        messageInput.value = `Hej Mads,\n\nJeg har brugt din beregner og ser en estimeret pris på ${price} DKK/md for ${loc} lokationer og ${users} medarbejdere.\n\nLad os tage en snak om detaljerne.`;
+
+        // Use timeout to ensure scroll happens first (if using default anchor)
+        // or just focus immediately
+        setTimeout(() => {
+           messageInput.focus();
+        }, 500);
+      }
+    });
+  }
+})();
