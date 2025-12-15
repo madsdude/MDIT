@@ -278,6 +278,42 @@
         </div>
       </section>
 
+      <section id="calculator" class="section reveal">
+        <div class="container">
+          <div class="calculator-layout">
+            <div class="calculator-controls">
+              <p class="eyebrow">Prisberegner</p>
+              <h2>Hvad koster ro i maven?</h2>
+              <p>Justér parametrene og se din estimerede månedspris for fuld drift og support.</p>
+
+              <div class="input-group">
+                <label for="locations-slider">Antal lokationer: <span id="locations-val">5</span></label>
+                <input type="range" id="locations-slider" min="1" max="50" value="5">
+              </div>
+
+              <div class="input-group">
+                <label for="users-slider">Antal medarbejdere: <span id="users-val">50</span></label>
+                <input type="range" id="users-slider" min="10" max="500" value="50" step="10">
+              </div>
+            </div>
+
+            <div class="calculator-result">
+              <h3>Estimeret investering</h3>
+              <div class="price-display">
+                <span class="currency">DKK</span>
+                <span id="total-price" class="amount">22.500</span>
+                <span class="period">/ md.</span>
+              </div>
+              <div class="savings-pill">
+                Du sparer ca. <span id="savings-amount">6.500</span> DKK ift. egen drift
+              </div>
+              <p class="disclaimer">* Dette er et estimat. Endelig pris afhænger af udstyr og kompleksitet.</p>
+              <a href="#contact" class="primary-btn">Få et præcist tilbud</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="process" class="section reveal">
         <div class="container">
           <p class="eyebrow">Sådan arbejder vi</p>
