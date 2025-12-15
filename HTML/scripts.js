@@ -90,3 +90,49 @@
     statElements.forEach(animateStat);
   }
 })();
+
+/* Calculator Logic */
+(() => {
+  const locSlider = document.getElementById('locations-slider');
+  const userSlider = document.getElementById('users-slider');
+  const locVal = document.getElementById('locations-val');
+  const userVal = document.getElementById('users-val');
+  const totalPriceEl = document.getElementById('total-price');
+  const savingsEl = document.getElementById('savings-amount');
+
+  if (!locSlider || !userSlider) return;
+
+  const calculate = () => {
+    const locations = parseInt(locSlider.value);
+    const users = parseInt(userSlider.value);
+
+    // Update labels
+    locVal.textContent = locations;
+    userVal.textContent = users;
+
+    // Pricing Model (Example)
+    // Base per location: 2500 DKK
+    // Per user: 50 DKK
+    const basePerLocation = 2500;
+    const pricePerUser = 50;
+
+    const monthlyPrice = (locations * basePerLocation) + (users * pricePerUser);
+
+    // Traditional IT estimated cost (1.4x factor + hidden costs)
+    const traditionalCost = monthlyPrice * 1.4;
+    const savings = traditionalCost - monthlyPrice;
+
+    // Format numbers
+    const format = (num) => num.toLocaleString('da-DK');
+
+    // Animate or set text
+    totalPriceEl.textContent = format(monthlyPrice);
+    savingsEl.textContent = format(Math.round(savings));
+  };
+
+  locSlider.addEventListener('input', calculate);
+  userSlider.addEventListener('input', calculate);
+
+  // Initialize
+  calculate();
+})();
