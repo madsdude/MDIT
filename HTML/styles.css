@@ -1045,9 +1045,3 @@ input[type=range]::-moz-range-thumb:hover {
 #calculator .eyebrow {
   color: var(--primary);
 }
-
-/* Fix Z-Index for Calculator Interaction */
-#calculator .container {
-  position: relative;
-  z-index: 5;
-}
