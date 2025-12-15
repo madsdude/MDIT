@@ -2,6 +2,19 @@
 
 En enkel marketing-side der sælger Network as a Service og konsulentydelser for MDIT.
 
+## Opdatering med Git Bash
+
+Hvis du vil hente de nyeste ændringer ned til din computer, kan du gøre det via Git Bash:
+
+1.  Højreklik i mappen, hvor projektet ligger, og vælg **"Open Git Bash here"**.
+2.  Skriv følgende kommando og tryk på Enter:
+
+    ```bash
+    git pull
+    ```
+
+3.  Nu hentes de nyeste filer automatisk ned.
+
 ## Kom hurtigt i gang
 
 Krav: Docker 20+.
